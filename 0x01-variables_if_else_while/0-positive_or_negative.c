@@ -2,7 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 /* more headers goes there */
-
+/**
+ * main = void
+ * @n = number
+ */
 /* betty style doc ofr function main goes there */
 int main(void)
 {
