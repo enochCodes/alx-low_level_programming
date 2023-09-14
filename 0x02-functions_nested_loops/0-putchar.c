@@ -1,10 +1,20 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * main - print "_putchar"
- * Retrun: 0 Always
- */
+*main - function prints text as output
+*
+*Return:return 0
+*/
 int main(void)
 {
-	printf("_putchar");
+	char school[10] = "_putchar";
+
+	int i;
+
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(school[i]);
+	}
+	_putchar(10);
 	return (0);
 }
