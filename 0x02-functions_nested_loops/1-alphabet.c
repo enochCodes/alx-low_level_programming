@@ -5,7 +5,7 @@
  * it prints in lowercase
  * Return: no return
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	int letter;
 
