@@ -1,9 +1,12 @@
-#include <stdio.h>
-
+#ifndef MAIN_H
+#define MAIN_H
 /**
-*File:main.h
-*Author:Pericles Adjovi
-*Desc:header file containing functions declaration
+*main - header file for protoypes
+*void protoypes (void)
+*int protoypes (int)
 */
-
 int _isupper(int c);
+int _putchar(char c);
+void print_number(int n);
+
+#endif /* MAIN_H */
