@@ -1,8 +1,8 @@
-Low-Level Programming - Data Structures, Algorithms, Linux/Unix System Programming
-Description
+#Low-Level Programming - Data Structures, Algorithms, Linux/Unix System Programming
+#Description
 This repository contains programs written for the low-level programming and algorithm section .
 
-Structure
+#Structure
 0x00. C - Hello, World
 0x01. C - Variables, if, else, while
 0x02. C -Functions_nested_loops
@@ -35,7 +35,7 @@ Structure
 0x1C. C - Makefiles
 0x1D. C - Binary trees
 0x1E. C - Search Algorithms
-Requirements
+#Requirements
 Working with this project require you to have some tools installed:
 
 GCC : GNU Compiler
@@ -58,10 +58,10 @@ Repeat with other files or projects
 
 Author
 Pericles Adjovi <Pericles001>
-Aknowledgements
+#Acknowledgments
 All work contained in this project was completed as part of the curriculum for ALX Africa Software Engineering program built upon Holberton School projects and materials. Holberton School is a campus-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning.
 
-Credits
+#Credits
 For more information, visit these links.
 
 ALX
