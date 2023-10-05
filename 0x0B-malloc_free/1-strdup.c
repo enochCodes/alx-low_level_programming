@@ -10,9 +10,6 @@
  */
 char *_strdup(char *str)
 {
-	 int length = strlen(str);
-	char *string = malloc(sizeof(char) * length + 1);
-
 	if (str == NULL)
 	{
 		return (NULL);
@@ -20,13 +17,18 @@ char *_strdup(char *str)
 	else
 	{
 		int i;
+		int length = strlen(str);
+		char *string = malloc(sizeof(char) * length + 1);
 
+		if (string == NULL)
+		{
+			return (NULL);
+		}
 		for (i = 0; i < length; i++)
 		{
 			string[i] = str[i];
 		}
-	return (string);
 	string[i] = '\0';
-	free(string);
+	return (string);
 	}
 }
