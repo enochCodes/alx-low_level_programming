@@ -10,20 +10,16 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	if (s1 == NULL)
-	{
-		return (NULL);
-	}
-	else if (s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
-		int length1 = strlen(s1);
-		int length2 = strlen(s2);
+		int length1 = (s1 != NULL) ? strlen(s1) : 0;
+		int length2 = (s2 != NULL) ? strlen(s2) : 0;
 
-		char *str = malloc(sizeof(char) * length1 + length2 + 1);
+		char *str = malloc(sizeof(char) * (length1 + length2 + 1));
 
 		if (str == NULL)
 		{
@@ -31,8 +27,14 @@ char *str_concat(char *s1, char *s2)
 		}
 		else
 		{
-			strcpy(str, s1);
-			strcat(str, s2);
+			if (s1 != NULL)
+			{
+				strcpy(str, s1);
+			}
+			if (s2 != NULL)
+			{
+				strcat(str, s2);
+			}
 		}
 		return (str);
 	}
