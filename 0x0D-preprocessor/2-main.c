@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - print the name of compiled file name
- * Return: null
+ * Return: 0.
  */
 int main(void)
 {
