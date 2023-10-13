@@ -2,8 +2,10 @@
 #include <stddef.h>
 #include <stdio.h>
 /**
- * array_iterator -  executes a function given as a parameter on each element of an array.
+ * array_iterator -  executes a function given as a para
+ * meter on each element of an array.
  * @size: the size of the array
+ * @array: the arrays.
  * @action: is apointer to the function you need to use
  * Return: NULL 0.
  */
