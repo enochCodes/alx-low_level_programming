@@ -15,6 +15,7 @@ algorithm section .
 * [0x04. C - More functions, more nested loops](./0x04-more_functions_nested_loops)
 * [0x05. C - Pointers, arrays and strings](./0x05-pointers_arrays_strings)
 * [0x06. C - Pointers, arrays and strings](./0x06-pointers_arrays_strings)
+* 
 
 
 ## Requirements
@@ -66,4 +67,3 @@ All work contained in this project was completed as part of the curriculum for A
 For more information, visit these links.
 
 * [ALX ](https://www.alxafrica.com/)
-* [Holberton School](https://www.holbertonschool.com/)
