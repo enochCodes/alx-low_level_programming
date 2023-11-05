@@ -15,6 +15,7 @@ algorithm section .
 * [0x04. C - More functions, more nested loops](./0x04-more_functions_nested_loops)
 * [0x05. C - Pointers, arrays and strings](./0x05-pointers_arrays_strings)
 * [0x06. C - Pointers, arrays and strings](./0x06-pointers_arrays_strings)
+<<<<<<< HEAD
 * [0x07. C - Even more pointers, arrays and strings](./0x07-pointers_arrays_strings)
 * [0x08. C - Recursion](./0x08-recursion)
 * [0x09. C - Static libraries](./0x09-static_libraries)
@@ -33,6 +34,10 @@ algorithm section .
 * [0x0C. C - more malloc, free](./0x0C-more_malloc_free)
 * [0x0D. C - preprocessor](./0x0D-preprocessor)
 * [0x0E. C - Structures, typedef](./0x0E-structures_typedef)
+=======
+* 
+
+>>>>>>> 2ec20e0e68ed2dde89bed6c399c301d3fe8a4cad
 
 ## Requirements
 
@@ -83,4 +88,3 @@ All work contained in this project was completed as part of the curriculum for A
 For more information, visit these links.
 
 * [ALX ](https://www.alxafrica.com/)
-* [Holberton School](https://www.holbertonschool.com/)
