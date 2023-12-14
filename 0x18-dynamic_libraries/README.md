@@ -1,1 +1,0 @@
-c dynamic linking
