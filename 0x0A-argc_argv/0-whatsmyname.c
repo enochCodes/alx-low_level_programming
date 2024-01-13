@@ -1,6 +1,9 @@
 #include <stdio.h>
-
-int main(int argc, char* argv[])
+/**
+ * main - pass argumants
+ * Return: 0.
+ */
+int main(int argc, char *argv[])
 {
 	if (argc > 0)
 	{
