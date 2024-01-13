@@ -4,25 +4,28 @@
  * main - print the number of arguments
  * @argc: integer representing the number of arguments
  * @argv: array of strings representing the arguments
+ * @num1: integer
+ * @num2: integer2
  * Return: always 0.
  */
+#include <stdio.h>
+#include <stdlib.h>
+
 int main(int argc, char *argv[])
 {
-	if (argc < 3)
+	int num1, num2, result;
+	if (argc != 3)
 	{
 		printf("Error\n");
+		return 1;
 	}
-		if (argc > 1 && argc < 3)
-		{
-			int i;
-			int mul = 1;
-
-			for (i = 1; i < argc; i++)
-			{
-				mul *= atoi(argv[i]);
-			}
-			printf("%d\n", mul);
-		}
-		return (1);
+	
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+	
+	result = num1 * num2;
+	
+	printf("%d\n", result);
+	
+	return 0;
 }
-
