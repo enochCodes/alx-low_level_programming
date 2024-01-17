@@ -6,8 +6,6 @@
  * @argv: array of strings representing the arguments
  * Return: always 0.
  */
-#include <stdio.h>
-#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
