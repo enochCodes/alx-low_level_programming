@@ -36,7 +36,8 @@ char **strtow(char *str)
 	int j;
 	int wordLength;
 	const char *wordStart;
-
+	
+	wordLength = 0;
 	if (words == NULL)
 	{
 		return (NULL);
