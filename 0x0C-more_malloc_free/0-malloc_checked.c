@@ -2,7 +2,8 @@
 #include <stdlib.h>
 /**
  * *malloc_checked - checked the malloc
- * b - integer
+ * @b: integer
+ * Return: the pinter size
  */
 void *malloc_checked(unsigned int b)
 {
