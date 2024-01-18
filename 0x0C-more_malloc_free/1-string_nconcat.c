@@ -2,7 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+/**
+ * *string_nconcat - characotr yessaxage amnaklawe
+ * @s1: string1
+ * @s2: string2
+ * Return: str
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int length1;
