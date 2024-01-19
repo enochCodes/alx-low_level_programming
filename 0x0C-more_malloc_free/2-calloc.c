@@ -3,9 +3,9 @@
 #include <string.h>
 /**
  * *_calloc - total
- * @nmwnb: located
- * @ptr: nothing
- * @return: build same
+ * @nmemb: located
+ * @size: nothing
+ * Return: build same
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -19,14 +19,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	total_size = nmemb * size;
 
 	ptr = malloc(total_size);
-	
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-    
 
 	memset(ptr, 0, total_size);
-	
+
 	return (ptr);
 }
