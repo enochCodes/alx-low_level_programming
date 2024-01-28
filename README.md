@@ -33,6 +33,7 @@ algorithm section .
 * [0x0C. C - more malloc, free](./0x0C-more_malloc_free)
 * [0x0D. C - preprocessor](./0x0D-preprocessor)
 * [0x0E. C - Structures, typedef](./0x0E-structures_typedef)
+* [0x10. C - variadic, functions](./0x10-variadic_functions)
 
 ## Requirements
 
@@ -72,7 +73,7 @@ To access any project you are willing to view , please proceed like this:
 
 ## Author
 
-* **Pericles Adjovi** <[enochCodes](https://github.com/enochCodes)>
+* **Henok Samson** <[enochCodes](https://github.com/enochCodes)>
 
 ## Aknowledgements
 
