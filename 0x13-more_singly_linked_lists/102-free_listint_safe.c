@@ -20,10 +20,12 @@ size_t free_listint_safe(listint_t **h)
 	while (current != NULL)
 	{
 		nodes++;
+		printf("[%p] %d\n", (void *)current, current->n);
+
 		if (current <= current->next)
 		{
-			printf("-> [%p] %d\n", (void *)current, current->n);
-				* h = (NULL);
+			printf("-> [%p] %d\n", (void *)current->next, current->next->n);
+				* h = NULL;
 			return (nodes);
 		}
 		temp = current;
@@ -33,4 +35,3 @@ size_t free_listint_safe(listint_t **h)
 	*h = NULL;
 	return (nodes);
 }
-
