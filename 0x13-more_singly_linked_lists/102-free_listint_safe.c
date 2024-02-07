@@ -22,10 +22,10 @@ size_t free_listint_safe(listint_t **h)
 		nodes++;
 		printf("[%p] %d\n", (void *)current, current->n);
 
-		if (current <= current->next)
+		if (current <= current->next && current->next != NULL)
 		{
 			printf("-> [%p] %d\n", (void *)current->next, current->next->n);
-				* h = NULL;
+			*h = NULL;
 			return (nodes);
 		}
 		temp = current;
