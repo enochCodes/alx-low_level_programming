@@ -25,14 +25,15 @@ size_t print_listint_safe(const listint_t *head)
 
 		for (i = 0; i < count; i++)
 		{
-			if (check == current)
-			{printf("-> [%p] %d\n", (void *)current->next, current->next->n);
+			if (check == current->next)
+			{
+				printf("-> [%p] %d\n", (void *)current->next, current->next->n);
 				return (count);
 			}
 			check = check->next;
 		}
 		current = current->next;
 	}
-	return count;
+	return (count);
 }
 
