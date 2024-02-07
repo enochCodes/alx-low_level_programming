@@ -9,29 +9,40 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *current, *temp;
+	listint_t *slow, *fast, *temp;
 	size_t nodes = 0;
 
 	if (h == NULL || *h == NULL)
 		return (0);
 
-	current = *h;
+	slow = *h;
+	fast = (*h)->next;
 
-	while (current != NULL)
+	while (fast != NULL && fast->next != NULL && fast != slow)
 	{
-		nodes++;
-		printf("[%p] %d\n", (void *)current, current->n);
-
-		if (current <= current->next && current->next != NULL)
-		{
-			printf("-> [%p] %d\n", (void *)current->next, current->next->n);
-			*h = NULL;
-			return (nodes);
-		}
-		temp = current;
-		current = current->next;
-		free(temp);
+		slow = slow->next;
+		fast = fast->next->next;
 	}
-	*h = NULL;
+	if (fast == slow)
+	{
+		slow = *h;
+		while (slow != fast)
+		{
+			temp = slow;
+			slow = slow->next;
+			free(temp);
+			nodes++;
+		}
+	}
+
+	while (*h != NULL)
+	{
+		temp = *h;
+		*h = (*h)->next;
+		free(temp);
+		nodes++;
+	}
+
 	return (nodes);
 }
+
