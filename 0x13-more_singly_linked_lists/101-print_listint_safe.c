@@ -15,12 +15,12 @@ size_t print_listint_safe(const listint_t *head)
 	size_t i;
 
 	current = head;
-	
+
 	while (current != NULL)
 	{
 		count++;
 		printf("[%p] %d\n", (void *)current, current->n);
-		
+
 		check = head;
 
 		for (i = 0; i < count; i++)
