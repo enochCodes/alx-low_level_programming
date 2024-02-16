@@ -20,7 +20,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (*filename == '\0')
 		return (0);
-
+	if (access(filename, R_OK) == -1)
+	{
+		return (0);
+	}
 	file_descriptor = fopen(filename, "r");
 
 	if (file_descriptor == NULL)
