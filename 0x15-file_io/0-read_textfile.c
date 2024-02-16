@@ -14,42 +14,31 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *file_descriptor;
+	int fd;
+	ssize_t lenr, lenw;
 	char *buffer;
-	size_t chars_read;
 
-	if (*filename == '\0')
+	if (filename == NULL)
 		return (0);
-	if (access(filename, R_OK) == -1)
-	{
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
 		return (0);
-	}
-	file_descriptor = fopen(filename, "r");
-
-	if (file_descriptor == NULL)
-		return (0);
-
-	buffer = (char *)malloc(letters + 1);
-
+	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
 	{
-		fclose(file_descriptor);
+		close(fd);
 		return (0);
 	}
-
-	chars_read = fread(buffer, sizeof(char), letters, file_descriptor);
-
-	if (ferror(file_descriptor))
+	lenr = read(fd, buffer, letters);
+	close(fd);
+	if (lenr == -1)
 	{
 		free(buffer);
-		fclose(file_descriptor);
 		return (0);
 	}
-
-	buffer[chars_read] = '\0';
-	printf("%s", buffer);
+	lenw = write(STDOUT_FILENO, buffer, lenr);
 	free(buffer);
-
-	fclose(file_descriptor);
-	return (chars_read);
+	if (lenr != lenw)
+		return (0);
+	return (lenw);
 }
