@@ -1,51 +1,51 @@
 #include "lists.h"
 #include <stdlib.h>
-#include <stdio.h>
-
 /**
- * free_listint_safe - Frees a listint_t list
- * @h: Pointer to the head of the list
+ * free_listint_safe - frees a linked list.
+ * @h: head of a list.
  *
- * Return: The size of the list that was freed
+ * Return: size of the list that was freed.
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *slow, *fast, *temp;
-	size_t nodes = 0;
+	size_t nnodes = 0;
+	listint_t *hptr, *new, *add, *curr;
 
-	if (h == NULL || *h == NULL)
-		return (0);
-
-	slow = *h;
-	fast = (*h)->next;
-
-	while (fast != NULL && fast < fast->next)
+	hptr = NULL;
+	while (*h != NULL)
 	{
-		nodes++;
-		printf("[%p] %d\n", (void *)slow, slow->n);
+		new = malloc(sizeof(listint_t));
 
-		temp = slow;
-		slow = slow->next;
-		free(temp);
-
-		if (fast->next != NULL)
+		if (new == NULL)
 		{
-			nodes++;
-			printf("-> [%p] %d\n", (void *)fast, fast->n);
+			free_listint2(&hptr);
+			exit(98);
+		}
 
-			temp = fast;
-			fast = fast->next;
-			free(temp);
-		}
-		else
+		new->n = (int)*h;
+		new->next = hptr;
+		hptr = new;
+
+		add = hptr;
+
+		while (add->next != NULL)
 		{
-			nodes++;
-			printf("-> [%p] %d\n", (void *)fast, fast->n);
-			*h = NULL;
-			return (nodes);
+			add = add->next;
+			if (*h == (listint_t *)(add->n))
+			{
+				*h = NULL;
+				free_listint2(&hptr);
+				return (nnodes);
+			}
 		}
+
+		curr = *h;
+		*h = (*h)->next;
+		free(curr);
+		nnodes++;
 	}
-	*h = NULL;
-	return (nodes);
-}
 
+	*h = NULL;
+	free_listint2(&hptr);
+	return (nnodes);
+}
