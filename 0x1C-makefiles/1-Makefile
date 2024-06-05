@@ -1,0 +1,7 @@
+all: school
+CC = gcc
+SRCS := $(wildcard *.c)
+
+school:
+	${CC} -c $<
+
