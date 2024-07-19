@@ -30,7 +30,7 @@ int binary_search(int *array, size_t size, int value)
 			if (index < rightindex)
 				printf(", ");
 		}
-		printf ("\n");
+		printf("\n");
 
 		index = (leftindex + rightindex) / 2;
 		if (array[index] < value)
